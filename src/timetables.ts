@@ -547,8 +547,12 @@ export const day2 = {
   },
   {
   "start_time": "13:00",
+"end_time": "14:30",
   "artist": "BLACKPINK"
-  }
+  },
+  {
+  "start_time": "15:35",
+  "artist": "Calvin Harris"
   ],
   "Channel 2 Outdoor Theatre": [
   {
