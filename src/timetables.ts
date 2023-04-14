@@ -6,8 +6,8 @@ export const day1 = {
       "artist": "Record Safari"
     },
     {
-      "start_time": "7:30",
-      "end_time": "8:10",
+      "start_time": "8:05",
+      "end_time": "8:30",
       "artist": "Doechii"
     },
     {
@@ -48,8 +48,8 @@ export const day1 = {
       "artist": "the Comet Is Coming"
     },
     {
-      "start_time": "7:45",
-      "end_time": "8:25",
+      "start_time": "8:05",
+      "end_time": "8:45",
       "artist": "Saba"
     },
     {
