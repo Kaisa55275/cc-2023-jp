@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 
 
-
 interface Performance {
   start_time: string;
   end_time?: string;
@@ -234,6 +233,19 @@ export default function Home() {
           )
         })}
       </div>
+      <span
+          style={{
+            display: "block",
+            fontSize: '0.8rem',
+            color: "#ffffff",
+            width: "96%",
+            margin: "0px auto"
+          }}
+        >
+        ※現地のタイムテーブルなので実際の配信スケジュールとは一部異なります。
+        <br />
+        （日本の8amくらいからliveになるっぽいです）
+        </span>
       {day && (
         <TimeTable timetable={timetable} />
       )}
