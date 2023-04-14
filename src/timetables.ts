@@ -709,26 +709,26 @@ export const day2 = {
       },
       {
       "start_time": "11:00",
-      "end_time": "12:50",
+      "end_time": "11:50",
       "artist": "Yaeji"
       },
       {
-      "start_time": "13:20",
-      "end_time": "14:05",
+      "start_time": "12:20",
+      "end_time": "13:05",
       "artist": "Eladio Carrión"
       },
       {
-      "start_time": "14:30",
-      "end_time": "15:15",
+      "start_time": "13:30",
+      "end_time": "14:15",
       "artist": "Monolink"
       },
       {
-      "start_time": "15:40",
-      "end_time": "16:30",
+      "start_time": "14:40",
+      "end_time": "15:30",
       "artist": "Chromeo"
       },
       {
-      "start_time": "16:55",
+      "start_time": "15:55",
       "end_time": null,
       "artist": "Donavan’s Yard"
       }
