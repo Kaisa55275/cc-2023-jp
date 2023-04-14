@@ -1,0 +1,94 @@
+*,*::before,*::after{box-sizing:border-box}*{margin:0}html,body{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #25171A;
+}
+
+.performance-container-flex {
+  display: flex;
+}
+
+.timetable-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 4rem;
+}
+
+.empty-header {
+  border: none;
+  background-color: #25171A;
+  height: 8rem;
+}
+
+.time-header {
+  border: none;
+  background-color: #25171A;
+  font-weight: normal;
+  height: 120px;
+  width: 60px;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #4c4c4c;
+  font-weight: 600;
+}
+
+.channel-header {
+  background-color: #25171A;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4c4c4c;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.performance-container {
+  border-radius: 5%;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.performance-content {
+  padding: 0.5rem;
+}
+
+.artist-name {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.channel {
+  font-size: 0.8rem;
+}
