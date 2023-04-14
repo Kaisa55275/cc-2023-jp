@@ -110,7 +110,7 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
           href={STAGES[channel].url}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ overflow: "scroll",height: `${performanceHeight}px`, marginBottom: `${(marginTimeToNextPerformance)}px`, backgroundColor: STAGES[channel].color,color: calculateFontColor(STAGES[channel].color), textDecoration: 'none' }}
+          style={{ overflowY: "scroll",height: `${performanceHeight}px`, marginBottom: `${(marginTimeToNextPerformance)}px`, backgroundColor: STAGES[channel].color,color: calculateFontColor(STAGES[channel].color), textDecoration: 'none' }}
         >
           <div className="performance-content">
             {performance.artist === "Frank Ocean" 
