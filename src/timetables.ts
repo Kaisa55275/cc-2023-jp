@@ -553,6 +553,7 @@ export const day2 = {
   {
   "start_time": "15:35",
   "artist": "Calvin Harris"
+}
   ],
   "Channel 2 Outdoor Theatre": [
   {
