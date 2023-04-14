@@ -1,4 +1,5 @@
 import { day1, day2, day3 } from '@/timetables';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
@@ -191,6 +192,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Head>
+        <title>Coachella2023日本時間タイムテーブル</title>
+      </Head>
       <div
         style={{
           display: 'flex',
