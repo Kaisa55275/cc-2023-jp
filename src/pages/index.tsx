@@ -112,9 +112,26 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
           style={{ overflow: "scroll",height: `${performanceHeight}px`, marginBottom: `${(marginTimeToNextPerformance)}px`, backgroundColor: STAGES[channel].color,color: calculateFontColor(STAGES[channel].color), textDecoration: 'none' }}
         >
           <div className="performance-content">
-            <div className="artist-name">{performance.artist}</div>
-            <div className="time">{performance.start_time}-{performance.end_time || ''}</div>
-            <div className="channel">{channel}</div>
+            {performance.artist === "Frank Ocean" 
+            ? (
+              <div className="artist-name"
+                style={{
+                  fontSize: "1.8rem",
+                  textShadow: "0 0 10px gold",
+                }}
+              >
+                {performance.artist}
+              </div>
+            )
+            : (
+              <div className="artist-name">{performance.artist}</div>
+            )}
+            <div className="time"
+              style={{ fontSize: "1.2rem" }}
+            >{performance.start_time}-{performance.end_time || ''}</div>
+            <div className="channel"
+              style={{ fontSize: "1rem" }}
+            >{channel}</div>
           </div>
         </a>
       );
