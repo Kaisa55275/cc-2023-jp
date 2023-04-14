@@ -112,7 +112,8 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
           rel="noopener noreferrer"
           style={{
             overflowY: "scroll",
-            overflowX: "unset",
+            overflowX: "hidden",
+            overflowWrap: "normal",
             height: `${performanceHeight}px`,
             marginBottom: `${(marginTimeToNextPerformance)}px`,
             backgroundColor: STAGES[channel].color,color: calculateFontColor(STAGES[channel].color), textDecoration: 'none'
