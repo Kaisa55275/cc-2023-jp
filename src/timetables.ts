@@ -1,11 +1,6 @@
 export const day1 = {
   "Channel 1 Coachella Stage": [
     {
-      "start_time": "6:50",
-      "end_time": "7:25",
-      "artist": "Record Safari"
-    },
-    {
       "start_time": "8:05",
       "end_time": "8:30",
       "artist": "Doechii"
@@ -38,16 +33,6 @@ export const day1 = {
   ],
   "Channel 2 Outdoor Theatre": [
     {
-      "start_time": "5:00",
-      "end_time": "6:20",
-      "artist": "Juicewon"
-    },
-    {
-      "start_time": "6:30",
-      "end_time": "7:15",
-      "artist": "the Comet Is Coming"
-    },
-    {
       "start_time": "8:05",
       "end_time": "8:45",
       "artist": "Saba"
@@ -74,16 +59,6 @@ export const day1 = {
     }
   ],
   "Channel 3 Sahara": [
-    {
-      "start_time": "5:45",
-      "end_time": "7:00",
-      "artist": "Mary Jane"
-    },
-    {
-      "start_time": "7:10",
-      "end_time": "8:05",
-      "artist": "Dombresky"
-    },
     {
       "start_time": "8:15",
       "end_time": "9:10",
@@ -116,23 +91,8 @@ export const day1 = {
   ],
   "Channel 4 Mojave": [
     {
-      "start_time": "4:30",
-      "end_time": "5:30",
-      "artist": "Black Jade"
-    },
-    {
-      "start_time": "5:40",
-      "end_time": "6:15",
-      "artist": "Lewis OfMan"
-    },
-    {
-      "start_time": "6:40",
-      "end_time": "7:20",
-      "artist": "Domi & JD Beck"
-    },
-    {
-      "start_time": "7:45",
-      "end_time": "8:25",
+      "start_time": "8:00",
+      "end_time": "8:45",
       "artist": "BENEE"
     },
     {
@@ -162,28 +122,13 @@ export const day1 = {
   ],
   "Channel 5 Gobi": [
     {
-      "start_time": "4:45",
-      "end_time": "5:10",
-      "artist": "Desert Gahuilla Bird Singers"
-    },
-    {
-      "start_time": "5:20",
-      "end_time": "6:00",
-      "artist": "Jupiter & Okwess"
-    },
-    {
-      "start_time": "6:20",
-      "end_time": "6:55",
-      "artist": "¿Téo?"
-    },
-    {
-      "start_time": "7:20",
-      "end_time": "8:05",
+      "start_time": "8:00",
+      "end_time": "8:25",
       "artist": "Gabriels"
     },
     {
-      "start_time": "8:25",
-      "end_time": "9:15",
+      "start_time": "8:30",
+      "end_time": "9:20",
       "artist": "Overmono"
     },
     {
@@ -213,28 +158,8 @@ export const day1 = {
   ],
   "Channel 6 Sonora": [
     {
-      "start_time": "4:00",
-      "end_time": "5:10",
-      "artist": "Jim Smith"
-    },
-    {
-      "start_time": "5:10",
-      "end_time": "5:40",
-      "artist": "The Murder Capital"
-    },
-    {
-      "start_time": "6:00",
-      "end_time": "6:35",
-      "artist": "Lava La Rue"
-    },
-    {
-      "start_time": "6:55",
-      "end_time": "7:25",
-      "artist": "Soul Glo"
-    },
-    {
-      "start_time": "7:40",
-      "end_time": "8:20",
+      "start_time": "8:00",
+      "end_time": "8:40",
       "artist": "DannyLux"
     },
     {
@@ -520,16 +445,16 @@ export const day0 = {
 
 export const day2 = {
   "Channel 1 Coachella Stage": [
-  {
-  "start_time": "6:20",
-  "end_time": "6:55",
-  "artist": "BRN LUXXRY"
-  },
-  {
-  "start_time": "7:00",
-  "end_time": "7:50",
-  "artist": "Marc Rebillet"
-  },
+  // {
+  // "start_time": "6:20",
+  // "end_time": "6:55",
+  // "artist": "BRN LUXXRY"
+  // },
+  // {
+  // "start_time": "7:00",
+  // "end_time": "7:50",
+  // "artist": "Marc Rebillet"
+  // },
   {
   "start_time": "8:20",
   "end_time": "9:05",
@@ -556,16 +481,16 @@ export const day2 = {
 }
   ],
   "Channel 2 Outdoor Theatre": [
-  {
-  "start_time": "5:40",
-  "end_time": "6:50",
-  "artist": "Yimbo"
-  },
-  {
-  "start_time": "7:00",
-  "end_time": "7:45",
-  "artist": "Rebelution"
-  },
+  // {
+  // "start_time": "5:40",
+  // "end_time": "6:50",
+  // "artist": "Yimbo"
+  // },
+  // {
+  // "start_time": "7:00",
+  // "end_time": "7:45",
+  // "artist": "Rebelution"
+  // },
   {
   "start_time": "8:10",
   "end_time": "8:55",
@@ -593,16 +518,16 @@ export const day2 = {
   ],
   
     "Channel 3 Sahara": [
-    {
-    "start_time": "5:50",
-    "end_time": "7:05",
-    "artist": "Venessa Michaels"
-    },
-    {
-    "start_time": "7:20",
-    "end_time": "8:00",
-    "artist": "Flo Milli"
-    },
+    // {
+    // "start_time": "5:50",
+    // "end_time": "7:05",
+    // "artist": "Venessa Michaels"
+    // },
+    // {
+    // "start_time": "7:20",
+    // "end_time": "8:00",
+    // "artist": "Flo Milli"
+    // },
     {
     "start_time": "8:20",
     "end_time": "9:15",
@@ -635,21 +560,21 @@ export const day2 = {
     }
     ],
     "Channel 4 Mojave": [
-    {
-    "start_time": "4:50",
-    "end_time": "5:55",
-    "artist": "Wave Groove"
-    },
-    {
-    "start_time": "6:10",
-    "end_time": "6:50",
-    "artist": "AG Club"
-    },
-    {
-    "start_time": "7:10",
-    "end_time": "7:50",
-    "artist": "Snail Mail"
-    },
+    // {
+    // "start_time": "4:50",
+    // "end_time": "5:55",
+    // "artist": "Wave Groove"
+    // },
+    // {
+    // "start_time": "6:10",
+    // "end_time": "6:50",
+    // "artist": "AG Club"
+    // },
+    // {
+    // "start_time": "7:10",
+    // "end_time": "7:50",
+    // "artist": "Snail Mail"
+    // },
     {
     "start_time": "8:15",
     "end_time": "8:55",
@@ -682,21 +607,21 @@ export const day2 = {
     }
     ],
     "Channel 5 Gobi": [
-      {
-      "start_time": "5:10",
-      "end_time": "6:20",
-      "artist": "dxsko"
-      },
-      {
-      "start_time": "6:30",
-      "end_time": "7:10",
-      "artist": "Elyanna"
-      },
-      {
-      "start_time": "7:35",
-      "end_time": "8:15",
-      "artist": "UMI"
-      },
+      // {
+      // "start_time": "5:10",
+      // "end_time": "6:20",
+      // "artist": "dxsko"
+      // },
+      // {
+      // "start_time": "6:30",
+      // "end_time": "7:10",
+      // "artist": "Elyanna"
+      // },
+      // {
+      // "start_time": "7:35",
+      // "end_time": "8:15",
+      // "artist": "UMI"
+      // },
       {
       "start_time": "8:40",
       "end_time": "9:30",
@@ -734,51 +659,75 @@ export const day2 = {
       }
       ],
       "Channel 6 Sonora": [
-      {
-      "start_time": "4:00",
-      "end_time": "5:00",
-      "artist": "Buster Jarvis"
-      },
-      {
-      "start_time": "5:00",
-      "end_time": "5:30",
-      "artist": "Horsegirl"
-      },
-      {
-      "start_time": "5:45",
-      "end_time": "6:15",
-      "artist": "Scowl"
-      },
-      {
-      "start_time": "6:40",
-      "end_time": "7:15",
-      "artist": "BRATTY"
-      },
-      {
-      "start_time": "7:35",
-      "end_time": "8:10",
-      "artist": "Destroy Boys"
-      },
+      // {
+      // "start_time": "4:00",
+      // "end_time": "5:00",
+      // "artist": "Buster Jarvis"
+      // },
+      // {
+      // "start_time": "5:00",
+      // "end_time": "5:30",
+      // "artist": "Horsegirl"
+      // },
+      // {
+      // "start_time": "5:45",
+      // "end_time": "6:15",
+      // "artist": "Scowl"
+      // },
+      // {
+      // "start_time": "6:40",
+      // "end_time": "7:15",
+      // "artist": "BRATTY"
+      // },
+      // {
+      // "start_time": "7:35",
+      // "end_time": "8:10",
+      // "artist": "Destroy Boys"
+      // },
       {
       "start_time": "8:30",
       "end_time": "9:15",
       "artist": "Ethel Cain"
-      }
-      ]
+      },
+      {
+        "start_time": "9:35",
+        "end_time": "10:15",
+        "artist": "The Linda Lindas"
+      },
+      {
+        "start_time": "10:40",
+        "end_time": "11:30",
+        "artist": "The Breeders"
+      },
+      {
+        "start_time": "11:55",
+        "end_time": "12:40",
+        "artist": "Sunset Rollercoaster"
+      },
+      {
+        "start_time": "13:00",
+        "end_time": "13:40",
+        "artist": "Baker"
+      },
+      {
+        "start_time": "14:00",
+        "artist": "NIA ARCHIVES"
+      },
+    ]
   }
 
   export const day3 = {
     "Channel 1 Coachella Stage": [
-    {
-    "start_time": "6:30",
-    "end_time": "7:15",
-    "artist": "Los Fabulosos Cadillacs"
-    },
-    {
-    "start_time": "7:40",
-    "end_time": "8:20",
-    "artist": "GloRilla"
-    },
+    // {
+    // "start_time": "6:30",
+    // "end_time": "7:15",
+    // "artist": "Los Fabulosos Cadillacs"
+    // },
+    // {
+    // "start_time": "7:40",
+    // "end_time": "8:20",
+    // "artist": "GloRilla"
+    // },
     {
     "start_time": "8:45",
     "end_time": "9:35",
@@ -801,16 +750,16 @@ export const day2 = {
     }
     ],
     "Channel 2 Outdoor Theatre": [
-    {
-    "start_time": "5:40",
-    "end_time": "6:50",
-    "artist": "Jaqck Glam"
-    },
-    {
-    "start_time": "7:00",
-    "end_time": "7:45",
-    "artist": "Stick Figure"
-    },
+    // {
+    // "start_time": "5:40",
+    // "end_time": "6:50",
+    // "artist": "Jaqck Glam"
+    // },
+    // {
+    // "start_time": "7:00",
+    // "end_time": "7:45",
+    // "artist": "Stick Figure"
+    // },
     {
     "start_time": "8:15",
     "end_time": "9:15",
@@ -833,16 +782,16 @@ export const day2 = {
     }
     ],
     "Channel 3 Sahara": [
-      {
-      "start_time": "5:25",
-      "end_time": "6:40",
-      "artist": "loboman"
-      },
-      {
-      "start_time": "6:50",
-      "end_time": "7:30",
-      "artist": "Pi’erre Bourne"
-      },
+      // {
+      // "start_time": "5:25",
+      // "end_time": "6:40",
+      // "artist": "loboman"
+      // },
+      // {
+      // "start_time": "6:50",
+      // "end_time": "7:30",
+      // "artist": "Pi’erre Bourne"
+      // },
       {
       "start_time": "8:00",
       "end_time": "8:50",
@@ -879,21 +828,21 @@ export const day2 = {
       }
       ],
       "Channel 4 Mojave": [
-      {
-      "start_time": "4:45",
-      "end_time": "5:55",
-      "artist": "DJ Lil Buddaha"
-      },
-      {
-      "start_time": "6:05",
-      "end_time": "6:45",
-      "artist": "Paris Texas"
-      },
-      {
-      "start_time": "7:05",
-      "end_time": "7:45",
-      "artist": "IDK"
-      },
+      // {
+      // "start_time": "4:45",
+      // "end_time": "5:55",
+      // "artist": "DJ Lil Buddaha"
+      // },
+      // {
+      // "start_time": "6:05",
+      // "end_time": "6:45",
+      // "artist": "Paris Texas"
+      // },
+      // {
+      // "start_time": "7:05",
+      // "end_time": "7:45",
+      // "artist": "IDK"
+      // },
       {
       "start_time": "8:10",
       "end_time": "8:50",
@@ -920,26 +869,26 @@ export const day2 = {
       }
       ],
       "Channel 5 Gobi": [
-        {
-          "start_time": "4:30",
-          "end_time": "5:40",
-          "artist": "Gingee"
-        },
-        {
-          "start_time": "5:50",
-          "end_time": "6:25",
-          "artist": "Ali Sethi"
-        },
-        {
-          "start_time": "6:45",
-          "end_time": "7:20",
-          "artist": "Joy Crookes"
-        },
-        {
-          "start_time": "7:40",
-          "end_time": "8:20",
-          "artist": "Fousheé"
-        },
+        // {
+        //   "start_time": "4:30",
+        //   "end_time": "5:40",
+        //   "artist": "Gingee"
+        // },
+        // {
+        //   "start_time": "5:50",
+        //   "end_time": "6:25",
+        //   "artist": "Ali Sethi"
+        // },
+        // {
+        //   "start_time": "6:45",
+        //   "end_time": "7:20",
+        //   "artist": "Joy Crookes"
+        // },
+        // {
+        //   "start_time": "7:40",
+        //   "end_time": "8:20",
+        //   "artist": "Fousheé"
+        // },
         {
           "start_time": "8:45",
           "end_time": "9:30",
@@ -966,26 +915,26 @@ export const day2 = {
         }
       ],
       "Channel 6 Sonora": [
-        {
-          "start_time": "4:00",
-          "end_time": "5:00",
-          "artist": "Argenis"
-        },
-        {
-          "start_time": "5:00",
-          "end_time": "5:30",
-          "artist": "Conexión Divina"
-        },
-        {
-          "start_time": "5:55",
-          "end_time": "6:30",
-          "artist": "Los Bitchos"
-        },
-        {
-          "start_time": "6:55",
-          "end_time": "7:35",
-          "artist": "El Michels Affair"
-        },
+        // {
+        //   "start_time": "4:00",
+        //   "end_time": "5:00",
+        //   "artist": "Argenis"
+        // },
+        // {
+        //   "start_time": "5:00",
+        //   "end_time": "5:30",
+        //   "artist": "Conexión Divina"
+        // },
+        // {
+        //   "start_time": "5:55",
+        //   "end_time": "6:30",
+        //   "artist": "Los Bitchos"
+        // },
+        // {
+        //   "start_time": "6:55",
+        //   "end_time": "7:35",
+        //   "artist": "El Michels Affair"
+        // },
         {
           "start_time": "8:00",
           "end_time": "8:40",

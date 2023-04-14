@@ -75,7 +75,7 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
 
   const getTimeRow = (): JSX.Element[] => {
     const timeArray: JSX.Element[] = [];
-    for (let i = 4; i < 17; i++) {
+    for (let i = 8; i < 17; i++) {
       timeArray.push(
         <div key={i} className="time-header">
           {i % 12 === 0 ? '12' : i % 12} {i < 12 ? 'AM' : 'PM'}
@@ -153,11 +153,12 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
         {getTimeRow()}
       </div>
       <div className="performance-container-flex">
-        {Object.entries(timetable).map(([channel, lineup], i) => 
+        {Object.entries(timetable)
+        .map(([channel, lineup], i) => 
           <div className="channel" key={JSON.stringify(lineup)}>
             <div key={`header-${i}`} className="channel-header"
               style={{
-                marginBottom: `${lineup.length > 0 ? calculatePerformanceLength('4:00', lineup[0].start_time) * 120 / 60 : 0}px`,
+                marginBottom: `${lineup.length > 0 ? calculatePerformanceLength('8:00', lineup[0].start_time) * 120 / 60 : 0}px`,
                 color: STAGES[channel].color
               }}
             >
@@ -244,7 +245,7 @@ export default function Home() {
         >
         ※現地のタイムテーブルなので実際の配信スケジュールとは一部異なります。
         <br />
-        （日本の8amくらいからliveになるっぽいです）
+        （8:30amくらいからliveになるっぽいです）
         </span>
       {day && (
         <TimeTable timetable={timetable} />
