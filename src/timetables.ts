@@ -178,9 +178,19 @@ export const day1 = {
       "artist": "Magdalena Bay"
     },
     {
+      "start_time": "9:35",
+      "end_time": "9:50",
+      "artist": "The Murder Capital replay"
+    },
+    {
       "start_time": "9:55",
       "end_time": "10:40",
       "artist": "TV Girl"
+    },
+    {
+      "start_time": "10:40",
+      "end_time": "11:15",
+      "artist": "Lava La Rue replay"
     },
     {
       "start_time": "11:40",
