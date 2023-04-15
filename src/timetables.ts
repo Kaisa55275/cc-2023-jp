@@ -43,6 +43,11 @@ export const day1 = {
       artist: "YUNGBLUD",
     },
     {
+      start_time: "9:40",
+      end_time: "10:10",
+      artist: "The Comet Is Coming replay",
+    },
+    {
       start_time: "10:10",
       end_time: "11:00",
       artist: "SG Lewis",
