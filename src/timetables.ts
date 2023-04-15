@@ -101,9 +101,19 @@ export const day1 = {
       "artist": "MUNA"
     },
     {
+      "start_time": "9:35",
+      "end_time": "10:55",
+      "artist": "Lewis OfMan replay"
+    },
+    {
       "start_time": "10:00",
       "end_time": "10:45",
       "artist": "Wet Leg"
+    },
+    {
+      "start_time": "10:45",
+      "end_time": "11:25",
+      "artist": "Domi & JD Beck replay"
     },
     {
       "start_time": "11:35",
