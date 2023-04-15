@@ -75,6 +75,11 @@ export const day1 = {
       artist: "Vintage Culture",
     },
     {
+      start_time: "10:15",
+      end_time: "10:45",
+      artist: "Dombresky replay",
+    },
+    {
       start_time: "10:45",
       end_time: "11:35",
       artist: "Blink 182",
