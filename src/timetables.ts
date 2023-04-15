@@ -208,6 +208,11 @@ export const day1 = {
       artist: "Sasha Alex Sloan",
     },
     {
+      start_time: "12:20",
+      end_time: "12:50",
+      artist: "Soul Glo replay",
+    },
+    {
       start_time: "13:30",
       artist: "Uncle Waffles",
     },
