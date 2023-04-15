@@ -189,7 +189,7 @@ export const day1 = {
     },
     {
       start_time: "9:35",
-      end_time: "9:50",
+      end_time: "9:55",
       artist: "The Murder Capital replay",
     },
     {
