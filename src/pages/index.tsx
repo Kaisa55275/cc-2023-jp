@@ -130,7 +130,28 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
                 {performance.artist}
               </div>
             )
-            : (
+            : performance.artist === "Weyes Blood" ? (
+              <div className="artist-name"
+              style={{
+                color: "darkblue",
+                fontSize: "1.6rem",
+                textShadow: "2px 2px 3px #558ABB",
+              }}
+            >
+              {performance.artist}
+            </div>
+            ) : 
+             performance.artist === "BLACKPINK" ? (
+              <div className="artist-name"
+              style={{
+                fontSize: "1.6rem",
+                textShadow: "2px 2px 10px #ffa6fc",
+              }}
+            >
+              {performance.artist}
+            </div>
+            ) : 
+            (
               <div className="artist-name">{performance.artist}</div>
             )}
             <div className="time"
