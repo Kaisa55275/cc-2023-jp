@@ -247,8 +247,8 @@ export const day2 = {
       artist: "Rosalía",
     },
     {
-      start_time: "13:00",
-      end_time: "14:30",
+      start_time: "13:30",
+      end_time: "14:50",
       artist: "BLACKPINK",
     },
     {
