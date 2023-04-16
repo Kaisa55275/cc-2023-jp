@@ -273,6 +273,11 @@ export const day2 = {
       artist: "EARTHGANG",
     },
     {
+      "start_time": "8:55",
+      "end_time": "9:20",
+      "artist": "Rebelution replay"
+    },
+    {
       start_time: "9:20",
       end_time: "10:10",
       artist: "Hiatus Kaiyote",
@@ -313,6 +318,11 @@ export const day2 = {
       start_time: "9:30",
       end_time: "10:25",
       artist: "ElderBrook",
+    },
+    {
+      "start_time": "10:25",
+      "end_time": "10:50",
+      "artist": "Flo Milli replay"
     },
     {
       start_time: "10:50",
@@ -357,9 +367,19 @@ export const day2 = {
       artist: "Yung Lean",
     },
     {
+      "start_time": "8:55",
+      "end_time": "9:20",
+      "artist": "AG Club"
+    },
+    {
       start_time: "9:20",
       end_time: "10:00",
       artist: "Mura Masa",
+    },
+    {
+      "start_time": "10:00",
+      "end_time": "10:25",
+      "artist": "Snail Mail replay"
     },
     {
       start_time: "10:25",
@@ -402,6 +422,11 @@ export const day2 = {
       start_time: "8:40",
       end_time: "9:30",
       artist: "Dinner Party",
+    },
+      {
+      "start_time": "9:30",
+      "end_time": "9:55",
+      "artist": "Elyanna replay"
     },
     {
       start_time: "9:55",
@@ -464,6 +489,11 @@ export const day2 = {
       start_time: "8:30",
       end_time: "9:15",
       artist: "Ethel Cain",
+    },
+    {
+      "start_time": "9:15",
+      "end_time": "9:35",
+      "artist": "Horsegirl replay"
     },
     {
       start_time: "9:35",
