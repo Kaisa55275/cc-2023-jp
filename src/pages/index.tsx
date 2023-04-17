@@ -164,9 +164,17 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
   )
 }
 
+const isValidDay = (day?: string | string[]): day is "1" | "2" | "3" => {
+  if (typeof day === "string") {
+    return ["1", "2", "3"].includes(day)
+  }
+
+  return false
+}
+
 export default function Home() {
   const router = useRouter()
-  const day = router.query.day as "1"
+  const day = isValidDay(router.query.day) ? router.query.day : "1"
 
   const days = {
     "1": "4/15(土)",
@@ -186,7 +194,7 @@ export default function Home() {
     }
   }, [day, router])
 
-  const timetable = timetables[day!]
+  const timetable = timetables[day]
 
   return (
     <main className="app-main">
