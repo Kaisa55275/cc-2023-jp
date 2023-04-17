@@ -1,4 +1,16 @@
-export const day1 = {
+import type { StageName } from "./stages"
+
+export type Performance = {
+  start_time: `${string}:${string}`
+  end_time?: `${string}:${string}`
+  artist: string
+}
+
+type TimeTableData = {
+  [key in StageName]: Performance[]
+}
+
+export const DAY_1: TimeTableData = {
   "Channel 1 Coachella Stage": [
     {
       start_time: "8:05",
@@ -27,7 +39,6 @@ export const day1 = {
     },
     {
       start_time: "15:25",
-      end_time: "",
       artist: "Bad Bunny",
     },
   ],
@@ -59,7 +70,6 @@ export const day1 = {
     },
     {
       start_time: "13:50",
-      end_time: "",
       artist: "The Chemical Brothers",
     },
   ],
@@ -217,9 +227,9 @@ export const day1 = {
       artist: "Uncle Waffles",
     },
   ],
-};
+}
 
-export const day2 = {
+export const DAY_2: TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:20",
@@ -273,9 +283,9 @@ export const day2 = {
       artist: "EARTHGANG",
     },
     {
-      "start_time": "8:55",
-      "end_time": "9:20",
-      "artist": "Rebelution replay"
+      start_time: "8:55",
+      end_time: "9:20",
+      artist: "Rebelution replay",
     },
     {
       start_time: "9:20",
@@ -320,9 +330,9 @@ export const day2 = {
       artist: "ElderBrook",
     },
     {
-      "start_time": "10:25",
-      "end_time": "10:50",
-      "artist": "Flo Milli replay"
+      start_time: "10:25",
+      end_time: "10:50",
+      artist: "Flo Milli replay",
     },
     {
       start_time: "10:50",
@@ -341,7 +351,6 @@ export const day2 = {
     },
     {
       start_time: "15:45",
-      end_time: "",
       artist: "Suicideboy$",
     },
   ],
@@ -367,9 +376,9 @@ export const day2 = {
       artist: "Yung Lean",
     },
     {
-      "start_time": "8:55",
-      "end_time": "9:20",
-      "artist": "AG Club"
+      start_time: "8:55",
+      end_time: "9:20",
+      artist: "AG Club",
     },
     {
       start_time: "9:20",
@@ -377,9 +386,9 @@ export const day2 = {
       artist: "Mura Masa",
     },
     {
-      "start_time": "10:00",
-      "end_time": "10:25",
-      "artist": "Snail Mail replay"
+      start_time: "10:00",
+      end_time: "10:25",
+      artist: "Snail Mail replay",
     },
     {
       start_time: "10:25",
@@ -398,7 +407,6 @@ export const day2 = {
     },
     {
       start_time: "14:35",
-      end_time: "",
       artist: "Labrinth",
     },
   ],
@@ -423,10 +431,10 @@ export const day2 = {
       end_time: "9:30",
       artist: "Dinner Party",
     },
-      {
-      "start_time": "9:30",
-      "end_time": "9:55",
-      "artist": "Elyanna replay"
+    {
+      start_time: "9:30",
+      end_time: "9:55",
+      artist: "Elyanna replay",
     },
     {
       start_time: "9:55",
@@ -455,7 +463,6 @@ export const day2 = {
     },
     {
       start_time: "15:55",
-      end_time: null,
       artist: "Donavan’s Yard",
     },
   ],
@@ -491,9 +498,9 @@ export const day2 = {
       artist: "Ethel Cain",
     },
     {
-      "start_time": "9:15",
-      "end_time": "9:35",
-      "artist": "Horsegirl replay"
+      start_time: "9:15",
+      end_time: "9:35",
+      artist: "Horsegirl replay",
     },
     {
       start_time: "9:35",
@@ -520,9 +527,9 @@ export const day2 = {
       artist: "NIA ARCHIVES",
     },
   ],
-};
+}
 
-export const day3 = {
+export const DAY_3: TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:30",
@@ -583,7 +590,6 @@ export const day3 = {
     },
     {
       start_time: "12:40",
-      end_time: null,
       artist: "Fisher + Chris Lake",
     },
   ],
@@ -771,4 +777,4 @@ export const day3 = {
       artist: "Sudan Archives",
     },
   ],
-};
+}

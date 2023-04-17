@@ -1,4 +1,3 @@
-*,*::before,*::after{box-sizing:border-box}*{margin:0}html,body{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
 html {
   font-size: 62.5%;
 }
@@ -10,6 +9,22 @@ body {
 
 .performance-container-flex {
   display: flex;
+}
+
+.date-selector {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1rem;
+}
+
+.day {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px #ffffff;
 }
 
 .timetable-container {
@@ -36,6 +51,14 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   height: 4rem;
+}
+
+.note {
+  display: block;
+  font-size: 0.8rem;
+  color: #ffffff;
+  width: 96%;
+  margin: 0px auto;
 }
 
 .empty-header {
