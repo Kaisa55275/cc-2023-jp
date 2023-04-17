@@ -544,16 +544,16 @@ export const day3 = {
       end_time: "10:50",
       artist: "Kali Uchis",
     },
-    {
-      start_time: "11:25",
-      end_time: "12:40",
-      artist: "Björk",
-    },
-    {
-      start_time: "14:05",
-      end_time: null,
-      artist: "Frank Ocean",
-    },
+    // {
+    //   start_time: "11:25",
+    //   end_time: "12:40",
+    //   artist: "Björk",
+    // },
+    // {
+    //   start_time: "14:05",
+    //   end_time: null,
+    //   artist: "Frank Ocean",
+    // },
   ],
   "Channel 2 Outdoor Theatre": [
     // {
