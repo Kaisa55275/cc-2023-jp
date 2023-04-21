@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 
-
 const WEEKS = ["1", "2"] as const
 export type Week = (typeof WEEKS)[number]
 
@@ -13,7 +12,6 @@ type TimeTableProps<T> = {
   timetable: { [channel: string]: Performance[] }
   week: T
 }
-
 
 function isStageName<T extends Week>(name: string, week: T): name is StageName<T> {
   return name in STAGES[week]
@@ -154,7 +152,7 @@ const TimeTable = <T extends Week>({ timetable, week }: TimeTableProps<T>) => {
       <div className="performance-container-flex">
         {Object.entries(timetable).map(([channel, lineup], i) => {
           if (!isStageName(channel, week)) return null
-          
+
           const stages = STAGES[week] as { [key in typeof channel]: { color: string } }
 
           return (

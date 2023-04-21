@@ -176,16 +176,16 @@ export const DAY_1: TimeTableData = {
       artist: "Ashnikko",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
     // {
     //   start_time: "8:00",
     //   end_time: "8:40",
     //   artist: "DannyLux",
     // },
     {
-      start_time: "8:50",
-      end_time: "9:35",
-      artist: "Magdalena Bay",
+      start_time: "8:15",
+      end_time: "9:30",
+      artist: "Denis Cruz + PAWSA",
     },
     // {
     //   start_time: "9:35",
@@ -193,9 +193,9 @@ export const DAY_1: TimeTableData = {
     //   artist: "The Murder Capital replay",
     // },
     {
-      start_time: "9:55",
-      end_time: "10:40",
-      artist: "TV Girl",
+      start_time: "9:30",
+      end_time: "10:45",
+      artist: "Nora En Pure",
     },
     // {
     //   start_time: "10:40",
@@ -203,9 +203,9 @@ export const DAY_1: TimeTableData = {
     //   artist: "Lava La Rue replay",
     // },
     {
-      start_time: "11:40",
-      end_time: "12:20",
-      artist: "Sasha Alex Sloan",
+      start_time: "10:45",
+      end_time: "12:15",
+      artist: "Idris Elba",
     },
     // {
     //   start_time: "12:20",
@@ -213,8 +213,18 @@ export const DAY_1: TimeTableData = {
     //   artist: "Soul Glo replay",
     // },
     {
-      start_time: "12:45",
-      artist: "Uncle Waffles",
+      start_time: "12:15",
+      end_time: "13:45",
+      artist: "Mochakk",
+    },
+    {
+      start_time: "13:45",
+      end_time: "15:15",
+      artist: "TESTPILOT",
+    },
+    {
+      start_time: "15:15",
+      artist: "Maceo Plex",
     },
   ],
 }
@@ -457,7 +467,7 @@ export const DAY_2: TimeTableData = {
       artist: "Donavan’s Yard",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
     // {
     // "start_time": "4:00",
     // "end_time": "5:00",
@@ -484,38 +494,33 @@ export const DAY_2: TimeTableData = {
     // "artist": "Destroy Boys"
     // },
     {
-      start_time: "8:30",
-      end_time: "9:15",
-      artist: "Ethel Cain",
-    },
-    // {
-    //   start_time: "9:15",
-    //   end_time: "9:35",
-    //   artist: "Horsegirl replay",
-    // },
-    {
-      start_time: "9:35",
-      end_time: "10:15",
-      artist: "The Linda Lindas",
+      start_time: "8:15",
+      end_time: "9:30",
+      artist: "Mathame",
     },
     {
-      start_time: "10:40",
-      end_time: "11:30",
-      artist: "The Breeders",
+      start_time: "9:30",
+      end_time: "10:45",
+      artist: "DJ Tennis + Carlita",
     },
     {
-      start_time: "11:55",
-      end_time: "12:40",
-      artist: "Sunset Rollercoaster",
+      start_time: "10:45",
+      end_time: "12:00",
+      artist: "Jan Blomqvist",
     },
     {
-      start_time: "13:00",
-      end_time: "13:40",
-      artist: "Baker",
+      start_time: "12:00",
+      end_time: "13:30",
+      artist: "Who Made Who",
     },
     {
-      start_time: "14:00",
-      artist: "NIA ARCHIVES",
+      start_time: "13:30",
+      end_time: "15:00",
+      artist: "Hot Since 82",
+    },
+    {
+      start_time: "15:00",
+      artist: "Keinemusik",
     },
   ],
 }
@@ -731,7 +736,7 @@ export const DAY_3: TimeTableData = {
       artist: "DPR LIVE + DPR IAN",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
     // {
     //   "start_time": "4:00",
     //   "end_time": "5:00",
@@ -753,33 +758,23 @@ export const DAY_3: TimeTableData = {
     //   "artist": "El Michels Affair"
     // },
     {
-      start_time: "8:00",
-      end_time: "8:40",
-      artist: "Sleaford Mods",
-    },
-    {
-      start_time: "9:05",
-      end_time: "9:40",
-      artist: "Momma",
+      start_time: "8:30",
+      end_time: "10:00",
+      artist: "Cassian",
     },
     {
       start_time: "10:00",
-      end_time: "10:45",
-      artist: "Alex G",
+      end_time: "11:30",
+      artist: "Sasha & John Digweed",
     },
     {
-      start_time: "11:15",
-      end_time: "11:50",
-      artist: "Mareux",
+      start_time: "11:30",
+      end_time: "13:00",
+      artist: "Camelphat",
     },
     {
-      start_time: "12:10",
-      end_time: "12:50",
-      artist: "Knocked Loose",
-    },
-    {
-      start_time: "13:10",
-      artist: "Sudan Archives",
+      start_time: "13:00",
+      artist: "Adam Beyer",
     },
   ],
 }
