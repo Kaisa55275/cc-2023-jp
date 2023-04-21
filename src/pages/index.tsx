@@ -5,15 +5,25 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 
-type TimeTableProps = {
+
+const WEEKS = ["1", "2"] as const
+export type Week = (typeof WEEKS)[number]
+
+type TimeTableProps<T> = {
   timetable: { [channel: string]: Performance[] }
+  week: T
 }
 
-const isStageName = (name: string): name is StageName => {
-  return name in STAGES
+
+function isStageName<T extends Week>(name: string, week: T): name is StageName<T> {
+  return name in STAGES[week]
 }
 
-const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
+const getStages = (week: Week): StageName<Week>[] => {
+  return Object.keys(STAGES[week]) as StageName<Week>[]
+}
+
+const TimeTable = <T extends Week>({ timetable, week }: TimeTableProps<T>) => {
   const calculateEndTime = (start: string, end?: string): string => {
     if (end) {
       return end
@@ -45,7 +55,13 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
     return timeArray
   }
 
-  const getPerformanceRow = (channel: StageName, lineup: Performance[]): JSX.Element[] => {
+  function getPerformanceRow<T extends Week, C extends StageName<T>>(
+    channel: C,
+    lineup: Performance[],
+    week: T
+  ): JSX.Element[] {
+    const stages = STAGES[week] as { [key in C]: { color: string; url: string } }
+
     return lineup.map((performance, j) => {
       const hourHeight = 120
       const performanceLength = calculatePerformanceLength(
@@ -68,7 +84,7 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
         <a
           key={`${channel}-${j}`}
           className="performance-container"
-          href={STAGES[channel].url}
+          href={stages[channel].url}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -77,8 +93,8 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
             overflowWrap: "normal",
             height: `${performanceHeight}px`,
             marginBottom: `${marginTimeToNextPerformance}px`,
-            backgroundColor: STAGES[channel].color,
-            color: calculateFontColor(STAGES[channel].color),
+            backgroundColor: stages[channel].color,
+            color: calculateFontColor(stages[channel].color),
             textDecoration: "none",
           }}
         >
@@ -137,7 +153,9 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
       </div>
       <div className="performance-container-flex">
         {Object.entries(timetable).map(([channel, lineup], i) => {
-          if (!isStageName(channel)) return null
+          if (!isStageName(channel, week)) return null
+          
+          const stages = STAGES[week] as { [key in typeof channel]: { color: string } }
 
           return (
             <div className="channel" key={JSON.stringify(lineup)}>
@@ -150,12 +168,12 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
                       ? (calculatePerformanceLength("8:00", lineup[0].start_time) * 120) / 60
                       : 0
                   }px`,
-                  color: STAGES[channel].color,
+                  color: stages[channel].color,
                 }}
               >
                 {channel}
               </div>
-              {getPerformanceRow(channel, lineup)}
+              {getPerformanceRow(channel, lineup, week)}
             </div>
           )
         })}
@@ -180,7 +198,7 @@ const isValidWeek = (week?: string | string[]): week is "1" | "2" => {
   return false
 }
 
-const getDays = (week: "1" | "2") => {
+const getDays = (week: Week) => {
   if (week === "1") {
     return {
       "1": "4/15(土)",
@@ -304,9 +322,9 @@ export default function Home() {
       <span className="note">
         ※現地のタイムテーブルなので実際の配信スケジュールとは一部異なります。
         <br />
-        （8:30amくらいからliveになるっぽいです）
+        リプレイ等は余裕があったら追加します。各チャンネル見た方が確実です。
       </span>
-      {timetable && <TimeTable timetable={timetable} />}
+      {timetable && week && <TimeTable timetable={timetable} week={week} />}
     </main>
   )
 }

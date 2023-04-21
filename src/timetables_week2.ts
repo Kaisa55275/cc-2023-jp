@@ -232,29 +232,29 @@ export const DAY_2: TimeTableData = {
     // "artist": "Marc Rebillet"
     // },
     {
-      start_time: "8:20",
-      end_time: "9:05",
+      start_time: "8:10",
+      end_time: "8:55",
       artist: "070 Shake",
     },
     {
-      start_time: "9:35",
-      end_time: "10:25",
+      start_time: "9:25",
+      end_time: "10:20",
       artist: "Charli XCX",
     },
     {
-      start_time: "11:00",
-      end_time: "12:10",
+      start_time: "10:55",
+      end_time: "12:05",
       artist: "Rosalía",
     },
     {
-      start_time: "13:30",
-      end_time: "14:50",
+      start_time: "13:20",
+      // end_time: "14:50",
       artist: "BLACKPINK",
     },
-    {
-      start_time: "15:35",
-      artist: "Calvin Harris",
-    },
+    // {
+    //   start_time: "15:35",
+    //   artist: "Calvin Harris",
+    // },
   ],
   "Channel 2 Outdoor Theatre": [
     // {
@@ -267,19 +267,19 @@ export const DAY_2: TimeTableData = {
     // "end_time": "7:45",
     // "artist": "Rebelution"
     // },
+    // {
+    //   start_time: "8:05",
+    //   end_time: "8:20",
+    //   artist: "EARTHGANG",
+    // },
+    // {
+    //   start_time: "8:55",
+    //   end_time: "9:20",
+    //   artist: "Rebelution replay",
+    // },
     {
-      start_time: "8:10",
-      end_time: "8:55",
-      artist: "EARTHGANG",
-    },
-    {
-      start_time: "8:55",
-      end_time: "9:20",
-      artist: "Rebelution replay",
-    },
-    {
-      start_time: "9:20",
-      end_time: "10:10",
+      start_time: "9:15",
+      end_time: "10:05",
       artist: "Hiatus Kaiyote",
     },
     {
@@ -319,11 +319,11 @@ export const DAY_2: TimeTableData = {
       end_time: "10:25",
       artist: "ElderBrook",
     },
-    {
-      start_time: "10:25",
-      end_time: "10:50",
-      artist: "Flo Milli replay",
-    },
+    // {
+    //   start_time: "10:25",
+    //   end_time: "10:50",
+    //   artist: "Flo Milli replay",
+    // },
     {
       start_time: "10:50",
       end_time: "11:30",
@@ -335,13 +335,14 @@ export const DAY_2: TimeTableData = {
       artist: "Tale Of Us",
     },
     {
-      start_time: "14:20",
-      end_time: "15:10",
-      artist: "The Kid Laroi",
+      start_time: "13:30",
+      end_time: "14:20",
+      artist: "Suicideboy$",
     },
     {
-      start_time: "15:45",
-      artist: "Suicideboy$",
+      start_time: "14:45",
+      // end_time: "15:10",
+      artist: "The Kid Laroi",
     },
   ],
   "Channel 4 Mojave": [
@@ -365,21 +366,21 @@ export const DAY_2: TimeTableData = {
       end_time: "8:55",
       artist: "Yung Lean",
     },
-    {
-      start_time: "8:55",
-      end_time: "9:20",
-      artist: "AG Club",
-    },
+    // {
+    //   start_time: "8:55",
+    //   end_time: "9:20",
+    //   artist: "AG Club",
+    // },
     {
       start_time: "9:20",
       end_time: "10:00",
       artist: "Mura Masa",
     },
-    {
-      start_time: "10:00",
-      end_time: "10:25",
-      artist: "Snail Mail replay",
-    },
+    // {
+    //   start_time: "10:00",
+    //   end_time: "10:25",
+    //   artist: "Snail Mail replay",
+    // },
     {
       start_time: "10:25",
       end_time: "11:10",
@@ -396,7 +397,7 @@ export const DAY_2: TimeTableData = {
       artist: "Underworld",
     },
     {
-      start_time: "14:35",
+      start_time: "14:40",
       artist: "Labrinth",
     },
   ],
@@ -417,33 +418,33 @@ export const DAY_2: TimeTableData = {
     // "artist": "UMI"
     // },
     {
-      start_time: "8:40",
-      end_time: "9:30",
+      start_time: "8:30",
+      end_time: "9:20",
       artist: "Dinner Party",
     },
+    // {
+    //   start_time: "9:30",
+    //   end_time: "9:55",
+    //   artist: "Elyanna replay",
+    // },
     {
-      start_time: "9:30",
-      end_time: "9:55",
-      artist: "Elyanna replay",
-    },
-    {
-      start_time: "9:55",
+      start_time: "9:45",
       end_time: "10:35",
       artist: "Shenseea",
     },
     {
-      start_time: "11:00",
-      end_time: "11:50",
+      start_time: "10:50",
+      end_time: "11:40",
       artist: "Yaeji",
     },
     {
-      start_time: "12:20",
-      end_time: "13:05",
+      start_time: "12:00",
+      end_time: "13:00",
       artist: "Eladio Carrión",
     },
     {
-      start_time: "13:30",
-      end_time: "14:15",
+      start_time: "13:25",
+      end_time: "14:10",
       artist: "Monolink",
     },
     {
@@ -452,7 +453,7 @@ export const DAY_2: TimeTableData = {
       artist: "Chromeo",
     },
     {
-      start_time: "15:55",
+      start_time: "15:45",
       artist: "Donavan’s Yard",
     },
   ],
@@ -487,11 +488,11 @@ export const DAY_2: TimeTableData = {
       end_time: "9:15",
       artist: "Ethel Cain",
     },
-    {
-      start_time: "9:15",
-      end_time: "9:35",
-      artist: "Horsegirl replay",
-    },
+    // {
+    //   start_time: "9:15",
+    //   end_time: "9:35",
+    //   artist: "Horsegirl replay",
+    // },
     {
       start_time: "9:35",
       end_time: "10:15",
@@ -538,7 +539,7 @@ export const DAY_3: TimeTableData = {
     },
     {
       start_time: "10:00",
-      end_time: "10:50",
+      end_time: "10:55",
       artist: "Kali Uchis",
     },
     // {
@@ -551,6 +552,20 @@ export const DAY_3: TimeTableData = {
     //   end_time: null,
     //   artist: "Frank Ocean",
     // },
+    // {
+    //   start_time: "11:25",
+    //   end_time: "12:40",
+    //   artist: "Björk",
+    // },
+    {
+      start_time: "13:20",
+      end_time: "14:20",
+      artist: "blink-182",
+    },
+    {
+      artist: "TBA",
+      start_time: "14:25",
+    },
   ],
   "Channel 2 Outdoor Theatre": [
     // {
@@ -564,22 +579,22 @@ export const DAY_3: TimeTableData = {
     // "artist": "Stick Figure"
     // },
     {
-      start_time: "8:15",
-      end_time: "9:15",
+      start_time: "8:30",
+      end_time: "9:30",
       artist: "Big Wild",
     },
     {
-      start_time: "9:40",
-      end_time: "10:25",
+      start_time: "9:55",
+      end_time: "10:40",
       artist: "Rae Sremmurd",
     },
     {
-      start_time: "10:50",
-      end_time: "11:40",
+      start_time: "11:05",
+      end_time: "11:55",
       artist: "Dominic Fike",
     },
     {
-      start_time: "12:40",
+      start_time: "12:35",
       artist: "Fisher + Chris Lake",
     },
   ],
@@ -594,38 +609,38 @@ export const DAY_3: TimeTableData = {
     // "end_time": "7:30",
     // "artist": "Pi’erre Bourne"
     // },
+    // {
+    //   start_time: "8:00",
+    //   end_time: "8:50",
+    //   artist: "MK",
+    // },
     {
-      start_time: "8:00",
-      end_time: "8:50",
-      artist: "MK",
-    },
-    {
-      start_time: "9:00",
-      end_time: "9:40",
+      start_time: "9:05",
+      end_time: "9:45",
       artist: "Latto",
     },
+    // {
+    //   start_time: "10:00",
+    //   end_time: "10:20",
+    //   artist: "LØREN",
+    // },
     {
-      start_time: "10:00",
-      end_time: "10:20",
-      artist: "LØREN",
-    },
-    {
-      start_time: "10:45",
-      end_time: "11:30",
+      start_time: "10:10",
+      end_time: "11:00",
       artist: "Jackson Wang",
     },
     {
-      start_time: "11:45",
-      end_time: "12:40",
+      start_time: "11:25",
+      end_time: "12:15",
       artist: "Jai Wolf",
     },
     {
-      start_time: "13:05",
-      end_time: "13:55",
+      start_time: "12:40",
+      end_time: "13:30",
       artist: "A Boogie",
     },
     {
-      start_time: "15:20",
+      start_time: "13:45",
       artist: "Boris Brejcha",
     },
   ],
