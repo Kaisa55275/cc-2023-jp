@@ -1,19 +1,27 @@
 import { STAGES, type StageName } from "@/stages"
-import { DAY_1, DAY_2, DAY_3, type Performance } from "@/timetables"
+import type { Performance, TimeTableData } from "@/timetables"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
-type TimeTableProps = {
+const WEEKS = ["1", "2"] as const
+export type Week = (typeof WEEKS)[number]
+
+type TimeTableProps<T> = {
   timetable: { [channel: string]: Performance[] }
+  week: T
 }
 
-const isStageName = (name: string): name is StageName => {
-  return name in STAGES
+function isStageName<T extends Week>(name: string, week: T): name is StageName<T> {
+  return name in STAGES[week]
 }
 
-const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
+const getStages = (week: Week): StageName<Week>[] => {
+  return Object.keys(STAGES[week]) as StageName<Week>[]
+}
+
+const TimeTable = <T extends Week>({ timetable, week }: TimeTableProps<T>) => {
   const calculateEndTime = (start: string, end?: string): string => {
     if (end) {
       return end
@@ -45,7 +53,13 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
     return timeArray
   }
 
-  const getPerformanceRow = (channel: StageName, lineup: Performance[]): JSX.Element[] => {
+  function getPerformanceRow<T extends Week, C extends StageName<T>>(
+    channel: C,
+    lineup: Performance[],
+    week: T
+  ): JSX.Element[] {
+    const stages = STAGES[week] as { [key in C]: { color: string; url: string } }
+
     return lineup.map((performance, j) => {
       const hourHeight = 120
       const performanceLength = calculatePerformanceLength(
@@ -68,7 +82,7 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
         <a
           key={`${channel}-${j}`}
           className="performance-container"
-          href={STAGES[channel].url}
+          href={stages[channel].url}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -77,8 +91,8 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
             overflowWrap: "normal",
             height: `${performanceHeight}px`,
             marginBottom: `${marginTimeToNextPerformance}px`,
-            backgroundColor: STAGES[channel].color,
-            color: calculateFontColor(STAGES[channel].color),
+            backgroundColor: stages[channel].color,
+            color: calculateFontColor(stages[channel].color),
             textDecoration: "none",
           }}
         >
@@ -137,7 +151,9 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
       </div>
       <div className="performance-container-flex">
         {Object.entries(timetable).map(([channel, lineup], i) => {
-          if (!isStageName(channel)) return null
+          if (!isStageName(channel, week)) return null
+
+          const stages = STAGES[week] as { [key in typeof channel]: { color: string } }
 
           return (
             <div className="channel" key={JSON.stringify(lineup)}>
@@ -150,12 +166,12 @@ const TimeTable: React.FC<TimeTableProps> = ({ timetable }) => {
                       ? (calculatePerformanceLength("8:00", lineup[0].start_time) * 120) / 60
                       : 0
                   }px`,
-                  color: STAGES[channel].color,
+                  color: stages[channel].color,
                 }}
               >
                 {channel}
               </div>
-              {getPerformanceRow(channel, lineup)}
+              {getPerformanceRow(channel, lineup, week)}
             </div>
           )
         })}
@@ -172,29 +188,86 @@ const isValidDay = (day?: string | string[]): day is "1" | "2" | "3" => {
   return false
 }
 
-export default function Home() {
-  const router = useRouter()
-  const day = isValidDay(router.query.day) ? router.query.day : null
-
-  const days = {
-    "1": "4/15(土)",
-    "2": "4/16(日)",
-    "3": "4/17(月)",
+const isValidWeek = (week?: string | string[]): week is "1" | "2" => {
+  if (typeof week === "string") {
+    return ["1", "2"].includes(week)
   }
 
-  const timetables = {
+  return false
+}
+
+type TimeTables<T extends Week> = {
+  "1": TimeTableData<T>
+  "2": TimeTableData<T>
+  "3": TimeTableData<T>
+}
+
+const getDays = (week: Week) => {
+  if (week === "1") {
+    return {
+      "1": "4/15(土)",
+      "2": "4/16(日)",
+      "3": "4/17(月)",
+    }
+  }
+
+  return {
+    "1": "4/22(土)",
+    "2": "4/23(日)",
+    "3": "4/24(月)",
+  }
+}
+
+const getTimeTables = async <T extends Week>(week: T) => {
+  const { DAY_1, DAY_2, DAY_3 } =
+    week === "1" ? await import("@/timetables") : await import("@/timetables_week2")
+
+  return {
     "1": DAY_1,
     "2": DAY_2,
     "3": DAY_3,
-  }
+  } as TimeTables<T>
+}
+
+export default function Home() {
+  const router = useRouter()
+  const day = isValidDay(router.query.day) ? router.query.day : null
+  const week = isValidWeek(router.query.week) ? router.query.week : null
+  const days = getDays(week || "1")
+
+  const [timetables, setTimetables] = useState<TimeTables<"1" | "2"> | null>(null)
 
   useEffect(() => {
     if (!day && router.isReady) {
-      router.replace("?day=1")
+      router.replace({
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          day: "1",
+        },
+      })
     }
-  }, [day, router])
 
-  const timetable = day ? timetables[day] : null
+    if (!week && router.isReady) {
+      router.replace({
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          week: "2",
+        },
+      })
+    }
+  }, [day, router, week])
+
+  useEffect(() => {
+    if (week) {
+      getTimeTables(week).then((timetables) => {
+        setTimetables(timetables)
+      })
+    }
+  }, [week])
+
+  const timetable = day && timetables ? timetables[day] : null
 
   return (
     <main className="app-main">
@@ -214,7 +287,13 @@ export default function Home() {
               }}
             >
               <Link
-                href={`?day=${day}`}
+                href={{
+                  pathname: "/",
+                  query: {
+                    ...router.query,
+                    day,
+                  },
+                }}
                 style={{
                   color: isSelected ? "#000000" : "#ffffff",
                   textDecoration: "none",
@@ -225,13 +304,25 @@ export default function Home() {
             </div>
           )
         })}
+        <Link
+          className="week-toggle"
+          href={{
+            pathname: "/",
+            query: {
+              ...router.query,
+              week: week === "1" ? "2" : "1",
+            },
+          }}
+        >
+          WEEK{week} &#128260;
+        </Link>
       </div>
       <span className="note">
         ※現地のタイムテーブルなので実際の配信スケジュールとは一部異なります。
         <br />
-        （8:30amくらいからliveになるっぽいです）
+        リプレイ等は余裕があったら追加します。各チャンネル見た方が確実です。
       </span>
-      {timetable && <TimeTable timetable={timetable} />}
+      {timetable && week && <TimeTable timetable={timetable} week={week} />}
     </main>
   )
 }

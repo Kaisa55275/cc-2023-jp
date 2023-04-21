@@ -1,266 +1,237 @@
-import { Week } from "./pages"
-import type { StageName } from "./stages"
+import { TimeTableData } from "./timetables"
 
-type Hour =
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "13"
-  | "14"
-  | "15"
-  | "16"
-  | "17"
-  | "18"
-  | "19"
-  | "20"
-  | "21"
-  | "22"
-  | "23"
-  | "24"
+type Week2TimeTableData = TimeTableData<"2">
 
-type Minute = "00" | "05" | "10" | "15" | "20" | "25" | "30" | "35" | "40" | "45" | "50" | "55"
-
-export type Performance = {
-  start_time: `${Hour}:${Minute}`
-  end_time?: `${Hour}:${Minute}`
-  artist: string
-}
-
-export type TimeTableData<T extends Week> = {
-  [key in StageName<T>]: Performance[]
-}
-
-type Week1TimeTableData = TimeTableData<"1">
-
-export const DAY_1: Week1TimeTableData = {
+export const DAY_1: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
+    // {
+    //   start_time: "8:05",
+    //   end_time: "8:30",
+    //   artist: "Doechii",
+    // },
     {
-      start_time: "8:05",
-      end_time: "8:30",
-      artist: "Doechii",
-    },
-    {
-      start_time: "8:30",
-      end_time: "9:15",
+      start_time: "8:20",
+      end_time: "9:05",
       artist: "Pusha T",
     },
     {
-      start_time: "9:45",
-      end_time: "10:30",
+      start_time: "9:35",
+      end_time: "10:20",
       artist: "Becky G",
     },
     {
-      start_time: "11:05",
-      end_time: "11:55",
+      start_time: "11:00",
+      end_time: "11:50",
       artist: "Burna Boy",
     },
     {
-      start_time: "12:35",
-      end_time: "13:50",
+      start_time: "12:30",
+      end_time: "13:45",
       artist: "Gorillaz",
     },
     {
-      start_time: "15:25",
+      start_time: "15:00",
       artist: "Bad Bunny",
     },
   ],
   "Channel 2 Outdoor Theatre": [
+    // {
+    //   start_time: "8:05",
+    //   end_time: "8:45",
+    //   artist: "Saba",
+    // },
     {
-      start_time: "8:05",
-      end_time: "8:45",
-      artist: "Saba",
-    },
-    {
-      start_time: "8:55",
-      end_time: "9:40",
+      start_time: "8:45",
+      end_time: "9:30",
       artist: "YUNGBLUD",
     },
+    // {
+    //   start_time: "9:40",
+    //   end_time: "10:10",
+    //   artist: "The Comet Is Coming replay",
+    // },
     {
-      start_time: "9:40",
-      end_time: "10:10",
-      artist: "The Comet Is Coming replay",
-    },
-    {
-      start_time: "10:10",
-      end_time: "11:00",
+      start_time: "10:00",
+      end_time: "10:50",
       artist: "SG Lewis",
     },
     {
-      start_time: "11:30",
-      end_time: "12:30",
+      start_time: "11:25",
+      end_time: "12:25",
       artist: "Kaytranada",
     },
     {
-      start_time: "13:50",
+      start_time: "13:45",
       artist: "The Chemical Brothers",
     },
   ],
   "Channel 3 Sahara": [
+    // {
+    //   start_time: "8:15",
+    //   end_time: "9:10",
+    //   artist: "Malaa",
+    // },
     {
-      start_time: "8:15",
-      end_time: "9:10",
-      artist: "Malaa",
-    },
-    {
-      start_time: "9:20",
-      end_time: "10:15",
+      start_time: "9:00",
+      end_time: "9:55",
       artist: "Vintage Culture",
     },
+    // {
+    //   start_time: "10:15",
+    //   end_time: "10:45",
+    //   artist: "Dombresky replay",
+    // },
     {
-      start_time: "10:15",
-      end_time: "10:45",
-      artist: "Dombresky replay",
+      start_time: "10:05",
+      end_time: "11:00",
+      artist: "MK",
     },
     {
-      start_time: "10:45",
-      end_time: "11:35",
-      artist: "Blink 182",
-    },
-    {
-      start_time: "12:05",
-      end_time: "12:55",
+      start_time: "11:15",
+      end_time: "12:05",
       artist: "Jamie Jones",
     },
     {
-      start_time: "13:20",
-      end_time: "14:05",
+      start_time: "12:35",
+      end_time: "13:20",
       artist: "Two Friends",
     },
     {
-      start_time: "14:35",
-      artist: "Metro Boomin",
+      start_time: "13:50",
+      artist: "Metro Boomin & Friends",
     },
   ],
   "Channel 4 Mojave": [
-    {
-      start_time: "8:00",
-      end_time: "8:45",
-      artist: "BENEE",
-    },
+    // {
+    //   start_time: "8:00",
+    //   end_time: "8:45",
+    //   artist: "BENEE",
+    // },
     {
       start_time: "8:50",
       end_time: "9:35",
       artist: "MUNA",
     },
-    {
-      start_time: "9:35",
-      end_time: "10:55",
-      artist: "Lewis OfMan replay",
-    },
+    // {
+    //   start_time: "9:35",
+    //   end_time: "10:55",
+    //   artist: "Lewis OfMan replay",
+    // },
     {
       start_time: "10:00",
       end_time: "10:45",
       artist: "Wet Leg",
     },
+    // {
+    //   start_time: "10:45",
+    //   end_time: "11:25",
+    //   artist: "Domi & JD Beck replay",
+    // },
     {
-      start_time: "10:45",
-      end_time: "11:25",
-      artist: "Domi & JD Beck replay",
-    },
-    {
-      start_time: "11:35",
-      end_time: "12:35",
+      start_time: "11:20",
+      end_time: "12:20",
       artist: "Blondie",
     },
     {
-      start_time: "13:10",
-      end_time: "13:55",
+      start_time: "12:50",
+      end_time: "13:40",
       artist: "Angèle",
     },
     {
-      start_time: "14:35",
+      start_time: "14:15",
       artist: "FKJ",
     },
   ],
   "Channel 5 Gobi": [
+    // {
+    //   start_time: "8:00",
+    //   end_time: "8:25",
+    //   artist: "Gabriels",
+    // },
     {
-      start_time: "8:00",
-      end_time: "8:25",
-      artist: "Gabriels",
-    },
-    {
-      start_time: "8:30",
-      end_time: "9:20",
+      start_time: "8:15",
+      end_time: "9:05",
       artist: "Overmono",
     },
     {
-      start_time: "9:45",
-      end_time: "10:35",
+      start_time: "9:30",
+      end_time: "10:20",
       artist: "Tobe Nwigwe",
     },
     {
-      start_time: "11:05",
-      end_time: "11:50",
+      start_time: "10:45",
+      end_time: "11:30",
       artist: "Yves Tumor",
     },
     {
-      start_time: "12:15",
-      end_time: "13:00",
+      start_time: "11:55",
+      end_time: "12:40",
       artist: "The Garden",
     },
     {
-      start_time: "13:25",
-      end_time: "14:15",
+      start_time: "13:05",
+      end_time: "13:55",
       artist: "Whyte Fang",
     },
     {
-      start_time: "14:35",
+      start_time: "14:20",
       artist: "Ashnikko",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
+    // {
+    //   start_time: "8:00",
+    //   end_time: "8:40",
+    //   artist: "DannyLux",
+    // },
     {
-      start_time: "8:00",
-      end_time: "8:40",
-      artist: "DannyLux",
+      start_time: "8:15",
+      end_time: "9:30",
+      artist: "Denis Cruz + PAWSA",
+    },
+    // {
+    //   start_time: "9:35",
+    //   end_time: "9:55",
+    //   artist: "The Murder Capital replay",
+    // },
+    {
+      start_time: "9:30",
+      end_time: "10:45",
+      artist: "Nora En Pure",
+    },
+    // {
+    //   start_time: "10:40",
+    //   end_time: "11:15",
+    //   artist: "Lava La Rue replay",
+    // },
+    {
+      start_time: "10:45",
+      end_time: "12:15",
+      artist: "Idris Elba",
+    },
+    // {
+    //   start_time: "12:20",
+    //   end_time: "12:50",
+    //   artist: "Soul Glo replay",
+    // },
+    {
+      start_time: "12:15",
+      end_time: "13:45",
+      artist: "Mochakk",
     },
     {
-      start_time: "8:50",
-      end_time: "9:35",
-      artist: "Magdalena Bay",
+      start_time: "13:45",
+      end_time: "15:15",
+      artist: "TESTPILOT",
     },
     {
-      start_time: "9:35",
-      end_time: "9:55",
-      artist: "The Murder Capital replay",
-    },
-    {
-      start_time: "9:55",
-      end_time: "10:40",
-      artist: "TV Girl",
-    },
-    {
-      start_time: "10:40",
-      end_time: "11:15",
-      artist: "Lava La Rue replay",
-    },
-    {
-      start_time: "11:40",
-      end_time: "12:20",
-      artist: "Sasha Alex Sloan",
-    },
-    {
-      start_time: "12:20",
-      end_time: "12:50",
-      artist: "Soul Glo replay",
-    },
-    {
-      start_time: "13:30",
-      artist: "Uncle Waffles",
+      start_time: "15:15",
+      artist: "Maceo Plex",
     },
   ],
 }
 
-export const DAY_2: Week1TimeTableData = {
+export const DAY_2: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:20",
@@ -273,29 +244,29 @@ export const DAY_2: Week1TimeTableData = {
     // "artist": "Marc Rebillet"
     // },
     {
-      start_time: "8:20",
-      end_time: "9:05",
+      start_time: "8:10",
+      end_time: "8:55",
       artist: "070 Shake",
     },
     {
-      start_time: "9:35",
-      end_time: "10:25",
+      start_time: "9:25",
+      end_time: "10:20",
       artist: "Charli XCX",
     },
     {
-      start_time: "11:00",
-      end_time: "12:10",
+      start_time: "10:55",
+      end_time: "12:05",
       artist: "Rosalía",
     },
     {
-      start_time: "13:30",
-      end_time: "14:50",
+      start_time: "13:20",
+      // end_time: "14:50",
       artist: "BLACKPINK",
     },
-    {
-      start_time: "15:35",
-      artist: "Calvin Harris",
-    },
+    // {
+    //   start_time: "15:35",
+    //   artist: "Calvin Harris",
+    // },
   ],
   "Channel 2 Outdoor Theatre": [
     // {
@@ -308,19 +279,19 @@ export const DAY_2: Week1TimeTableData = {
     // "end_time": "7:45",
     // "artist": "Rebelution"
     // },
+    // {
+    //   start_time: "8:05",
+    //   end_time: "8:20",
+    //   artist: "EARTHGANG",
+    // },
+    // {
+    //   start_time: "8:55",
+    //   end_time: "9:20",
+    //   artist: "Rebelution replay",
+    // },
     {
-      start_time: "8:10",
-      end_time: "8:55",
-      artist: "EARTHGANG",
-    },
-    {
-      start_time: "8:55",
-      end_time: "9:20",
-      artist: "Rebelution replay",
-    },
-    {
-      start_time: "9:20",
-      end_time: "10:10",
+      start_time: "9:15",
+      end_time: "10:05",
       artist: "Hiatus Kaiyote",
     },
     {
@@ -360,11 +331,11 @@ export const DAY_2: Week1TimeTableData = {
       end_time: "10:25",
       artist: "ElderBrook",
     },
-    {
-      start_time: "10:25",
-      end_time: "10:50",
-      artist: "Flo Milli replay",
-    },
+    // {
+    //   start_time: "10:25",
+    //   end_time: "10:50",
+    //   artist: "Flo Milli replay",
+    // },
     {
       start_time: "10:50",
       end_time: "11:30",
@@ -376,13 +347,14 @@ export const DAY_2: Week1TimeTableData = {
       artist: "Tale Of Us",
     },
     {
-      start_time: "14:20",
-      end_time: "15:10",
-      artist: "The Kid Laroi",
+      start_time: "13:30",
+      end_time: "14:20",
+      artist: "Suicideboy$",
     },
     {
-      start_time: "15:45",
-      artist: "Suicideboy$",
+      start_time: "14:45",
+      // end_time: "15:10",
+      artist: "The Kid Laroi",
     },
   ],
   "Channel 4 Mojave": [
@@ -406,21 +378,21 @@ export const DAY_2: Week1TimeTableData = {
       end_time: "8:55",
       artist: "Yung Lean",
     },
-    {
-      start_time: "8:55",
-      end_time: "9:20",
-      artist: "AG Club",
-    },
+    // {
+    //   start_time: "8:55",
+    //   end_time: "9:20",
+    //   artist: "AG Club",
+    // },
     {
       start_time: "9:20",
       end_time: "10:00",
       artist: "Mura Masa",
     },
-    {
-      start_time: "10:00",
-      end_time: "10:25",
-      artist: "Snail Mail replay",
-    },
+    // {
+    //   start_time: "10:00",
+    //   end_time: "10:25",
+    //   artist: "Snail Mail replay",
+    // },
     {
       start_time: "10:25",
       end_time: "11:10",
@@ -437,7 +409,7 @@ export const DAY_2: Week1TimeTableData = {
       artist: "Underworld",
     },
     {
-      start_time: "14:35",
+      start_time: "14:40",
       artist: "Labrinth",
     },
   ],
@@ -458,33 +430,33 @@ export const DAY_2: Week1TimeTableData = {
     // "artist": "UMI"
     // },
     {
-      start_time: "8:40",
-      end_time: "9:30",
+      start_time: "8:30",
+      end_time: "9:20",
       artist: "Dinner Party",
     },
+    // {
+    //   start_time: "9:30",
+    //   end_time: "9:55",
+    //   artist: "Elyanna replay",
+    // },
     {
-      start_time: "9:30",
-      end_time: "9:55",
-      artist: "Elyanna replay",
-    },
-    {
-      start_time: "9:55",
+      start_time: "9:45",
       end_time: "10:35",
       artist: "Shenseea",
     },
     {
-      start_time: "11:00",
-      end_time: "11:50",
+      start_time: "10:50",
+      end_time: "11:40",
       artist: "Yaeji",
     },
     {
-      start_time: "12:20",
-      end_time: "13:05",
+      start_time: "12:00",
+      end_time: "13:00",
       artist: "Eladio Carrión",
     },
     {
-      start_time: "13:30",
-      end_time: "14:15",
+      start_time: "13:25",
+      end_time: "14:10",
       artist: "Monolink",
     },
     {
@@ -493,11 +465,11 @@ export const DAY_2: Week1TimeTableData = {
       artist: "Chromeo",
     },
     {
-      start_time: "15:55",
+      start_time: "15:45",
       artist: "Donavan’s Yard",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
     // {
     // "start_time": "4:00",
     // "end_time": "5:00",
@@ -524,43 +496,38 @@ export const DAY_2: Week1TimeTableData = {
     // "artist": "Destroy Boys"
     // },
     {
-      start_time: "8:30",
-      end_time: "9:15",
-      artist: "Ethel Cain",
+      start_time: "8:15",
+      end_time: "9:30",
+      artist: "Mathame",
     },
     {
-      start_time: "9:15",
-      end_time: "9:35",
-      artist: "Horsegirl replay",
+      start_time: "9:30",
+      end_time: "10:45",
+      artist: "DJ Tennis + Carlita",
     },
     {
-      start_time: "9:35",
-      end_time: "10:15",
-      artist: "The Linda Lindas",
+      start_time: "10:45",
+      end_time: "12:00",
+      artist: "Jan Blomqvist",
     },
     {
-      start_time: "10:40",
-      end_time: "11:30",
-      artist: "The Breeders",
+      start_time: "12:00",
+      end_time: "13:30",
+      artist: "Who Made Who",
     },
     {
-      start_time: "11:55",
-      end_time: "12:40",
-      artist: "Sunset Rollercoaster",
+      start_time: "13:30",
+      end_time: "15:00",
+      artist: "Hot Since 82",
     },
     {
-      start_time: "13:00",
-      end_time: "13:40",
-      artist: "Baker",
-    },
-    {
-      start_time: "14:00",
-      artist: "NIA ARCHIVES",
+      start_time: "15:00",
+      artist: "Keinemusik",
     },
   ],
 }
 
-export const DAY_3: Week1TimeTableData = {
+export const DAY_3: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:30",
@@ -579,7 +546,7 @@ export const DAY_3: Week1TimeTableData = {
     },
     {
       start_time: "10:00",
-      end_time: "10:50",
+      end_time: "10:55",
       artist: "Kali Uchis",
     },
     // {
@@ -592,6 +559,20 @@ export const DAY_3: Week1TimeTableData = {
     //   end_time: null,
     //   artist: "Frank Ocean",
     // },
+    // {
+    //   start_time: "11:25",
+    //   end_time: "12:40",
+    //   artist: "Björk",
+    // },
+    {
+      start_time: "13:20",
+      end_time: "14:20",
+      artist: "blink-182",
+    },
+    {
+      artist: "TBA",
+      start_time: "14:25",
+    },
   ],
   "Channel 2 Outdoor Theatre": [
     // {
@@ -605,22 +586,22 @@ export const DAY_3: Week1TimeTableData = {
     // "artist": "Stick Figure"
     // },
     {
-      start_time: "8:15",
-      end_time: "9:15",
+      start_time: "8:30",
+      end_time: "9:30",
       artist: "Big Wild",
     },
     {
-      start_time: "9:40",
-      end_time: "10:25",
+      start_time: "9:55",
+      end_time: "10:40",
       artist: "Rae Sremmurd",
     },
     {
-      start_time: "10:50",
-      end_time: "11:40",
+      start_time: "11:05",
+      end_time: "11:55",
       artist: "Dominic Fike",
     },
     {
-      start_time: "12:40",
+      start_time: "12:35",
       artist: "Fisher + Chris Lake",
     },
   ],
@@ -635,38 +616,38 @@ export const DAY_3: Week1TimeTableData = {
     // "end_time": "7:30",
     // "artist": "Pi’erre Bourne"
     // },
+    // {
+    //   start_time: "8:00",
+    //   end_time: "8:50",
+    //   artist: "MK",
+    // },
     {
-      start_time: "8:00",
-      end_time: "8:50",
-      artist: "MK",
-    },
-    {
-      start_time: "9:00",
-      end_time: "9:40",
+      start_time: "9:05",
+      end_time: "9:45",
       artist: "Latto",
     },
+    // {
+    //   start_time: "10:00",
+    //   end_time: "10:20",
+    //   artist: "LØREN",
+    // },
     {
-      start_time: "10:00",
-      end_time: "10:20",
-      artist: "LØREN",
-    },
-    {
-      start_time: "10:45",
-      end_time: "11:30",
+      start_time: "10:10",
+      end_time: "11:00",
       artist: "Jackson Wang",
     },
     {
-      start_time: "11:45",
-      end_time: "12:40",
+      start_time: "11:25",
+      end_time: "12:15",
       artist: "Jai Wolf",
     },
     {
-      start_time: "13:05",
-      end_time: "13:55",
+      start_time: "12:40",
+      end_time: "13:30",
       artist: "A Boogie",
     },
     {
-      start_time: "15:20",
+      start_time: "13:45",
       artist: "Boris Brejcha",
     },
   ],
@@ -757,7 +738,7 @@ export const DAY_3: Week1TimeTableData = {
       artist: "DPR LIVE + DPR IAN",
     },
   ],
-  "Channel 6 Sonora": [
+  "Channel 6 Yuma": [
     // {
     //   "start_time": "4:00",
     //   "end_time": "5:00",
@@ -779,33 +760,23 @@ export const DAY_3: Week1TimeTableData = {
     //   "artist": "El Michels Affair"
     // },
     {
-      start_time: "8:00",
-      end_time: "8:40",
-      artist: "Sleaford Mods",
-    },
-    {
-      start_time: "9:05",
-      end_time: "9:40",
-      artist: "Momma",
+      start_time: "8:30",
+      end_time: "10:00",
+      artist: "Cassian",
     },
     {
       start_time: "10:00",
-      end_time: "10:45",
-      artist: "Alex G",
+      end_time: "11:30",
+      artist: "Sasha & John Digweed",
     },
     {
-      start_time: "11:15",
-      end_time: "11:50",
-      artist: "Mareux",
+      start_time: "11:30",
+      end_time: "13:00",
+      artist: "Camelphat",
     },
     {
-      start_time: "12:10",
-      end_time: "12:50",
-      artist: "Knocked Loose",
-    },
-    {
-      start_time: "13:10",
-      artist: "Sudan Archives",
+      start_time: "13:00",
+      artist: "Adam Beyer",
     },
   ],
 }
