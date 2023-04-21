@@ -1,6 +1,8 @@
 import { TimeTableData } from "./timetables"
 
-export const DAY_1: TimeTableData = {
+type Week2TimeTableData = TimeTableData<"2">
+
+export const DAY_1: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     //   start_time: "8:05",
@@ -229,7 +231,7 @@ export const DAY_1: TimeTableData = {
   ],
 }
 
-export const DAY_2: TimeTableData = {
+export const DAY_2: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:20",
@@ -525,7 +527,7 @@ export const DAY_2: TimeTableData = {
   ],
 }
 
-export const DAY_3: TimeTableData = {
+export const DAY_3: Week2TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:30",

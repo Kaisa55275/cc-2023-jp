@@ -1,3 +1,4 @@
+import { Week } from "./pages"
 import type { StageName } from "./stages"
 
 type Hour =
@@ -34,11 +35,13 @@ export type Performance = {
   artist: string
 }
 
-export type TimeTableData = {
-  [key in StageName]: Performance[]
+export type TimeTableData<T extends Week> = {
+  [key in StageName<T>]: Performance[]
 }
 
-export const DAY_1: TimeTableData = {
+type Week1TimeTableData = TimeTableData<"1">
+
+export const DAY_1: Week1TimeTableData = {
   "Channel 1 Coachella Stage": [
     {
       start_time: "8:05",
@@ -257,7 +260,7 @@ export const DAY_1: TimeTableData = {
   ],
 }
 
-export const DAY_2: TimeTableData = {
+export const DAY_2: Week1TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:20",
@@ -557,7 +560,7 @@ export const DAY_2: TimeTableData = {
   ],
 }
 
-export const DAY_3: TimeTableData = {
+export const DAY_3: Week1TimeTableData = {
   "Channel 1 Coachella Stage": [
     // {
     // "start_time": "6:30",

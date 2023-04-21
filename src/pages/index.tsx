@@ -196,6 +196,12 @@ const isValidWeek = (week?: string | string[]): week is "1" | "2" => {
   return false
 }
 
+type TimeTables<T extends Week> = {
+  "1": TimeTableData<T>
+  "2": TimeTableData<T>
+  "3": TimeTableData<T>
+}
+
 const getDays = (week: Week) => {
   if (week === "1") {
     return {
@@ -212,13 +218,7 @@ const getDays = (week: Week) => {
   }
 }
 
-type TimeTables = {
-  "1": TimeTableData
-  "2": TimeTableData
-  "3": TimeTableData
-}
-
-const getTimeTables = async (week: "1" | "2"): Promise<TimeTables> => {
+const getTimeTables = async <T extends Week>(week: T) => {
   const { DAY_1, DAY_2, DAY_3 } =
     week === "1" ? await import("@/timetables") : await import("@/timetables_week2")
 
@@ -226,7 +226,7 @@ const getTimeTables = async (week: "1" | "2"): Promise<TimeTables> => {
     "1": DAY_1,
     "2": DAY_2,
     "3": DAY_3,
-  }
+  } as TimeTables<T>
 }
 
 export default function Home() {
@@ -235,7 +235,7 @@ export default function Home() {
   const week = isValidWeek(router.query.week) ? router.query.week : null
   const days = getDays(week || "1")
 
-  const [timetables, setTimetables] = useState<TimeTables | null>(null)
+  const [timetables, setTimetables] = useState<TimeTables<"1" | "2"> | null>(null)
 
   useEffect(() => {
     if (!day && router.isReady) {
