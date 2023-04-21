@@ -1,6 +1,7 @@
 {
   "name": "cc-2023-jp",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

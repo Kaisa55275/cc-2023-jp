@@ -1,9 +1,9 @@
 import { STAGES, type StageName } from "@/stages"
-import { DAY_1, DAY_2, DAY_3, type Performance } from "@/timetables"
+import type { Performance, TimeTableData } from "@/timetables"
 import Head from "next/head"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 type TimeTableProps = {
   timetable: { [channel: string]: Performance[] }
@@ -172,29 +172,86 @@ const isValidDay = (day?: string | string[]): day is "1" | "2" | "3" => {
   return false
 }
 
-export default function Home() {
-  const router = useRouter()
-  const day = isValidDay(router.query.day) ? router.query.day : null
-
-  const days = {
-    "1": "4/15(土)",
-    "2": "4/16(日)",
-    "3": "4/17(月)",
+const isValidWeek = (week?: string | string[]): week is "1" | "2" => {
+  if (typeof week === "string") {
+    return ["1", "2"].includes(week)
   }
 
-  const timetables = {
+  return false
+}
+
+const getDays = (week: "1" | "2") => {
+  if (week === "1") {
+    return {
+      "1": "4/15(土)",
+      "2": "4/16(日)",
+      "3": "4/17(月)",
+    }
+  }
+
+  return {
+    "1": "4/22(土)",
+    "2": "4/23(日)",
+    "3": "4/24(月)",
+  }
+}
+
+type TimeTables = {
+  "1": TimeTableData
+  "2": TimeTableData
+  "3": TimeTableData
+}
+
+const getTimeTables = async (week: "1" | "2"): Promise<TimeTables> => {
+  const { DAY_1, DAY_2, DAY_3 } =
+    week === "1" ? await import("@/timetables") : await import("@/timetables_week2")
+
+  return {
     "1": DAY_1,
     "2": DAY_2,
     "3": DAY_3,
   }
+}
+
+export default function Home() {
+  const router = useRouter()
+  const day = isValidDay(router.query.day) ? router.query.day : null
+  const week = isValidWeek(router.query.week) ? router.query.week : null
+  const days = getDays(week || "1")
+
+  const [timetables, setTimetables] = useState<TimeTables | null>(null)
 
   useEffect(() => {
     if (!day && router.isReady) {
-      router.replace("?day=1")
+      router.replace({
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          day: "1",
+        },
+      })
     }
-  }, [day, router])
 
-  const timetable = day ? timetables[day] : null
+    if (!week && router.isReady) {
+      router.replace({
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          week: "2",
+        },
+      })
+    }
+  }, [day, router, week])
+
+  useEffect(() => {
+    if (week) {
+      getTimeTables(week).then((timetables) => {
+        setTimetables(timetables)
+      })
+    }
+  }, [week])
+
+  const timetable = day && timetables ? timetables[day] : null
 
   return (
     <main className="app-main">
@@ -214,7 +271,13 @@ export default function Home() {
               }}
             >
               <Link
-                href={`?day=${day}`}
+                href={{
+                  pathname: "/",
+                  query: {
+                    ...router.query,
+                    day,
+                  },
+                }}
                 style={{
                   color: isSelected ? "#000000" : "#ffffff",
                   textDecoration: "none",
@@ -225,6 +288,18 @@ export default function Home() {
             </div>
           )
         })}
+        <Link
+          className="week-toggle"
+          href={{
+            pathname: "/",
+            query: {
+              ...router.query,
+              week: week === "1" ? "2" : "1",
+            },
+          }}
+        >
+          WEEK{week} &#128260;
+        </Link>
       </div>
       <span className="note">
         ※現地のタイムテーブルなので実際の配信スケジュールとは一部異なります。
