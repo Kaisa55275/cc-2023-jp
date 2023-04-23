@@ -570,7 +570,7 @@ export const DAY_3: Week2TimeTableData = {
       artist: "blink-182",
     },
     {
-      artist: "TBA",
+      artist: "Four Tet × Fred Again... × Skrillex",
       start_time: "14:25",
     },
   ],
